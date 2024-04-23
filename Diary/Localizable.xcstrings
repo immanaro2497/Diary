@@ -1,0 +1,126 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "" : {
+
+    },
+    ".red" : {
+
+    },
+    "Add Item" : {
+
+    },
+    "Confirm password" : {
+      "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "पुष्टि करना पासवर्ड"
+          }
+        }
+      }
+    },
+    "Create" : {
+      "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "बनाएं"
+          }
+        }
+      }
+    },
+    "Diary" : {
+
+    },
+    "Earthquake" : {
+
+    },
+    "Earthquake Details" : {
+
+    },
+    "Error. %@" : {
+
+    },
+    "Hide password" : {
+
+    },
+    "Item at %@" : {
+
+    },
+    "Login" : {
+      "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "लॉग इन"
+          }
+        }
+      }
+    },
+    "Login Details" : {
+
+    },
+    "Login Failure" : {
+
+    },
+    "Name" : {
+      "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "नाम"
+          }
+        }
+      }
+    },
+    "New user" : {
+      "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "नए उपयोगकर्ता"
+          }
+        }
+      }
+    },
+    "OK" : {
+
+    },
+    "Password" : {
+      "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "पासवर्ड"
+          }
+        }
+      }
+    },
+    "Select an item" : {
+
+    },
+    "Show password" : {
+
+    },
+    "Title 1" : {
+
+    },
+    "Title 3" : {
+
+    },
+    "Title body" : {
+
+    },
+    "Title largetitle" : {
+
+    },
+    "Title title1" : {
+
+    },
+    "Username or Password did not match" : {
+
+    }
+  },
+  "version" : "1.0"
+}
