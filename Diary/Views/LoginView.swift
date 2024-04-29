@@ -86,10 +86,11 @@ struct LoginView: View {
         if UIDevice.isPad {
             return UIDevice.current.orientation.isPortrait ? 0.6 : 0.5
         } else {
-            print(UIDevice.current.orientation.isPortrait, UIDevice.current.orientation.isLandscape, UIDevice.current.orientation.rawValue)
             return UIDevice.current.orientation.isPortrait ? 0.9 : 0.7
         }
     }()
+    
+    let iconSize: CGFloat = 50
     
     let logger = Logger(subsystem: "com.example.diary", category: "LoginView")
     
@@ -99,6 +100,32 @@ struct LoginView: View {
                 VStack(spacing: 28) {
                     HStack {
                         Spacer()
+                        ZStack {
+                            Circle()
+                            Image(systemName: "lock.open.fill")
+                                .font(.title2)
+                                .foregroundStyle(.launchBackground)
+                        }
+                        .frame(width: iconSize, height: iconSize)
+                        .padding(.trailing, 16)
+                        .onTapGesture {
+                            Task {
+                                visibleScreen = .diaryTabScreen
+                            }
+                        }
+                        ZStack {
+                            Circle()
+                            Image(systemName: "plus.square.fill.on.square.fill")
+                                .font(.title2)
+                                .foregroundStyle(.launchBackground)
+                        }
+                        .frame(width: iconSize, height: iconSize)
+                        .padding(.trailing, 16)
+                        .onTapGesture {
+                            Task {
+                                try? await TestData.insertTestData(context: viewContext)
+                            }
+                        }
                         Button(action: {
                             withAnimation {
                                 createNewUser.toggle()
@@ -115,10 +142,9 @@ struct LoginView: View {
                     .padding([.top, .bottom], 50)
                     
                     HStack {
-                        let iconSize: CGFloat = 50
                         Spacer()
                         Text(createNewUser ? "New user" : "Login")
-                            .font(Fonts.scaledFont20)
+                            .font(Fonts.scaledFont20Heavy)
                             .padding(.leading, iconSize)
                         Spacer()
                         ZStack {
@@ -145,7 +171,6 @@ struct LoginView: View {
                         .onReceive(namePublisher
                             .debounce(for: 0.6, scheduler: DispatchQueue.main)
                         ) { text in
-                            print("comparing")
                             withAnimation {
                                 if text.trimmingCharacters(in: .whitespaces).isEmpty {
                                     nameError = .empty
@@ -265,11 +290,9 @@ struct LoginView: View {
     
     func onPressLoginButton() {
         if createNewUser {
-//                        for index in 1...100000 {
-                let user = User(context: viewContext)
-                user.username = name
-                user.password = password
-//                        }
+            let user = User(context: viewContext)
+            user.username = name
+            user.password = password
             do {
                 try viewContext.save()
             } catch {
@@ -292,7 +315,7 @@ struct LoginButtonLabelStyle: LabelStyle {
             configuration.title
             configuration.icon
         }
-        .font(Fonts.scaledFont20)
+        .font(Fonts.scaledFont20Heavy)
         .foregroundStyle(.white)
         .padding()
         .background(.launchBackground)

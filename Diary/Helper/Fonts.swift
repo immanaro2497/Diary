@@ -13,11 +13,11 @@ struct Fonts {
         UIFontMetrics(forTextStyle: .title1).scaledValue(for: size)
     }
     
-    static let scaledFont40: Font = {
+    static let scaledFont40Heavy: Font = {
         return Font.system(size: title1FontMetrics(40), weight: .heavy, design: .rounded)
     }()
     
-    static let scaledFont20: Font = {
+    static let scaledFont20Heavy: Font = {
         return Font.system(size: title1FontMetrics(20), weight: .heavy, design: .rounded)
     }()
     

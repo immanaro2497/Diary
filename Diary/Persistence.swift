@@ -27,6 +27,12 @@ struct PersistenceController {
         }
         return result
     }()
+    
+    static func earthquakeTestData(limit: Int) -> PersistenceController {
+        let result = PersistenceController(inMemory: true)
+        try? TestData.previewEarthquakeTestData(context: result.container.viewContext, limit: limit)
+        return result
+    }
 
     let container: NSPersistentContainer
 

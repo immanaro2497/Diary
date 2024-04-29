@@ -3,6 +3,39 @@
     <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
         <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
+    <entity name="Quake" representedClassName="Quake" syncable="YES">
+        <attribute name="alert" optional="YES" attributeType="String"/>
+        <attribute name="cdi" optional="YES" attributeType="Double" usesScalarValueType="NO"/>
+        <attribute name="code" optional="YES" attributeType="String"/>
+        <attribute name="detail" optional="YES" attributeType="URI"/>
+        <attribute name="dmin" optional="YES" attributeType="Double" usesScalarValueType="NO"/>
+        <attribute name="felt" optional="YES" attributeType="Integer 16" usesScalarValueType="NO"/>
+        <attribute name="gap" optional="YES" attributeType="Double" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="ids" optional="YES" attributeType="String"/>
+        <attribute name="magnitude" optional="YES" attributeType="Double" usesScalarValueType="NO"/>
+        <attribute name="magType" optional="YES" attributeType="String"/>
+        <attribute name="mmi" optional="YES" attributeType="Double" usesScalarValueType="NO"/>
+        <attribute name="nst" optional="YES" attributeType="Integer 16" usesScalarValueType="NO"/>
+        <attribute name="place" optional="YES" attributeType="String"/>
+        <attribute name="sig" optional="YES" attributeType="Integer 16" usesScalarValueType="NO"/>
+        <attribute name="status" optional="YES" attributeType="String"/>
+        <attribute name="time" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="tsunami" optional="YES" attributeType="Integer 16" usesScalarValueType="NO"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+        <attribute name="types" optional="YES" attributeType="String"/>
+        <attribute name="tz" optional="YES" attributeType="Integer 16" usesScalarValueType="NO"/>
+        <attribute name="updatedDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="url" optional="YES" attributeType="URI"/>
+        <relationship name="quakeLocation" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="QuakeLocation" inverseName="quake" inverseEntity="QuakeLocation"/>
+    </entity>
+    <entity name="QuakeLocation" representedClassName="QuakeLocation" syncable="YES">
+        <attribute name="depth" optional="YES" attributeType="Double" usesScalarValueType="NO"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" usesScalarValueType="NO"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" usesScalarValueType="NO"/>
+        <relationship name="quake" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Quake" inverseName="quakeLocation" inverseEntity="Quake"/>
+    </entity>
     <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
         <attribute name="password" optional="YES" attributeType="String" defaultValueString="DefaultPassword"/>
         <attribute name="username" attributeType="String" defaultValueString="DefaultName"/>

@@ -36,11 +36,54 @@ struct TestView: View {
     
     var body: some View {
         
-        TabView(selection: $selectedTab) {
-            ForEach(DiaryTabDetailView.allCases) { tab in
-                tab.tabDetailView
-            }
+        HStack {
+            
+                    HStack {
+                        Image(systemName: "book.closed.fill")
+                        if UIDevice.isPad {
+                            Text("Diary")
+                        }
+                    }
+                .foregroundStyle(selectedTab == .diaryDetails ? .yellow : .white)
+                .onTapGesture {
+                    selectedTab = .diaryDetails
+                }
+
+            Spacer()
+            
+                    HStack {
+                        Image(systemName: "globe.asia.australia")
+                        if UIDevice.isPad {
+                            Text("Earthquake")
+                        }
+                    }
+                .foregroundStyle(selectedTab == .earthquakeList ? .yellow : .white)
+                .onTapGesture {
+                    selectedTab = .earthquakeList
+                }
+            
+            Spacer()
+            
+                    HStack {
+                        Image(systemName: "person.text.rectangle.fill")
+                        if UIDevice.isPad {
+                            Text("Login")
+                        }
+                    }
+                .foregroundStyle(selectedTab == .loginDetails ? .yellow : .white)
+                .onTapGesture {
+                    selectedTab = .loginDetails
+                }
+            
         }
+        .frame(width: UIDevice.isPad ? 600 : 200)
+        .font(Fonts.scaledFont17Bold)
+        .padding([.top, .bottom], UIDevice.isPad ? 16 : 12)
+        .padding([.leading, .trailing], 32)
+        .background(.launchBackground)
+        .clipShape(Capsule())
+        .shadow(color: .launchBackground, radius: 10)
+        .padding([.leading, .trailing], UIDevice.isPad ? 24 : 16)
         
     }
 }

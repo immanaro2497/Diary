@@ -20,8 +20,6 @@ struct DiaryContentView: View {
     @State private var toastMessage = ""
     
     var body: some View {
-        //            TestView()
-        //                .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
         Group {
             switch visibleScreen {
             case .launchScreen:
@@ -29,7 +27,7 @@ struct DiaryContentView: View {
             case .loginScreen:
                 LoginView(visibleScreen: $visibleScreen)
             case .diaryTabScreen:
-                DiaryDetailsView()
+                DiaryTabView()
             }
         }
         .overlay {

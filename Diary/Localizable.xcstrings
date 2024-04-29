@@ -4,9 +4,6 @@
     "" : {
 
     },
-    ".red" : {
-
-    },
     "Add Item" : {
 
     },
@@ -36,7 +33,10 @@
     "Earthquake" : {
 
     },
-    "Earthquake Details" : {
+    "Earthquakes" : {
+
+    },
+    "Empty" : {
 
     },
     "Error. %@" : {
@@ -101,21 +101,6 @@
 
     },
     "Show password" : {
-
-    },
-    "Title 1" : {
-
-    },
-    "Title 3" : {
-
-    },
-    "Title body" : {
-
-    },
-    "Title largetitle" : {
-
-    },
-    "Title title1" : {
 
     },
     "Username or Password did not match" : {

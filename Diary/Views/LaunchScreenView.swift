@@ -22,7 +22,7 @@ struct LaunchScreenView: View {
     
     func singleTextView(text: String, index: Int) -> some View {
         Text(text)
-            .font(Fonts.scaledFont40)
+            .font(Fonts.scaledFont40Heavy)
             .scaleEffect(startAnimation ? 1.5 : 0.5)
             .offset(x: startAnimation ? CGFloat((30 * index) - 60) : 0, y: startAnimation ? -200 : -50)
             .animation(.ripple(index: index), value: startAnimation)
