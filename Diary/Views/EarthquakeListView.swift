@@ -13,6 +13,7 @@ struct EarthquakeListView: View {
     
     @FetchRequest(sortDescriptors: [SortDescriptor(\.time, order: .reverse)], predicate: NSPredicate(format: "magnitude != nil"))
     private var quakes: FetchedResults<Quake>
+    @State private var isPresented: Bool = false
     
     var body: some View {
         NavigationStack {
@@ -40,6 +41,27 @@ struct EarthquakeListView: View {
                                 .frame(width: 50, height: 50)
                                 .foregroundStyle(quake.getQuakeIntensityColor)
                                 .padding(.leading, 12)
+                            Spacer()
+                            Image(systemName: "info.circle.fill")
+                                .font(.title)
+                                .foregroundStyle(.launchBackground)
+                                .onTapGesture {
+                                    isPresented.toggle()
+                                }
+                                .sheet(isPresented: $isPresented, content: {
+                                    VStack {
+                                        HStack {
+                                            Spacer()
+                                            Button(action: {
+                                                isPresented.toggle()
+                                            }, label: {
+                                                Text("Close")
+                                            })
+                                            .padding(12)
+                                        }
+                                        EarthquakeDetailView(quake: quake)
+                                    }
+                                })
                         }
                     }
                 }
@@ -48,6 +70,7 @@ struct EarthquakeListView: View {
             .listStyle(.plain)
         }
         .navigationTitle("Earthquakes")
+        
     }
     
 }

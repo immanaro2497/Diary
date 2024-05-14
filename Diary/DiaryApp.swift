@@ -13,13 +13,13 @@ struct DiaryApp: App {
     var body: some Scene {
         WindowGroup {
             if ProcessInfo.processInfo.environment["IS_TESTING"] == "1" {
-                EarthquakeListView()
-                    .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
-                    .onAppear {
-                        print(FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask))
-                    }
-//                TestView()
+//                EarthquakeListView()
 //                    .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
+//                    .onAppear {
+//                        print(FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask))
+//                    }
+                TestView()
+                    .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
             } else {
                 DiaryContentView()
                     .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)

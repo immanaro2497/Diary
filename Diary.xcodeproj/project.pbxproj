@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		181F8C632BE3D2EE000BDC6E /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181F8C622BE3D2EE000BDC6E /* KeychainManager.swift */; };
 		1823297D2BD26B0E0023030B /* DiaryTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1823297C2BD26B0E0023030B /* DiaryTabView.swift */; };
 		182329822BD2AF5E0023030B /* DiaryDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182329812BD2AF5E0023030B /* DiaryDetailsView.swift */; };
 		182329842BD2AF730023030B /* EarthquakeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182329832BD2AF730023030B /* EarthquakeListView.swift */; };
@@ -62,6 +63,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		181F8C622BE3D2EE000BDC6E /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		181F8C642BE3E54D000BDC6E /* Diary.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Diary.entitlements; sourceTree = "<group>"; };
 		1823297C2BD26B0E0023030B /* DiaryTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryTabView.swift; sourceTree = "<group>"; };
 		182329812BD2AF5E0023030B /* DiaryDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDetailsView.swift; sourceTree = "<group>"; };
 		182329832BD2AF730023030B /* EarthquakeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthquakeListView.swift; sourceTree = "<group>"; };
@@ -71,11 +74,11 @@
 		1828478A2BD144E8004BAF5B /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		1828478D2BD16F2B004BAF5B /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		182913C32BC94550001F6161 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
-		182913C52BC94885001F6161 /* Diary.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Diary.xctestplan; sourceTree = "<group>"; };
 		182913CB2BC96CC3001F6161 /* CustomViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewModifiers.swift; sourceTree = "<group>"; };
 		18363AAC2BCBD8F7004ECC3C /* HoldButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoldButton.swift; sourceTree = "<group>"; };
 		18363AAE2BCBE673004ECC3C /* UIDevice+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
 		1847D8B92BD943EB007D47E0 /* EarthquakeLargeDataPretty.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = EarthquakeLargeDataPretty.json; sourceTree = "<group>"; };
+		185A38492BDFED11000B1DA4 /* DiaryTestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = DiaryTestPlan.xctestplan; sourceTree = "<group>"; };
 		18665B1A2BC549BA004E86DF /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		1877AD062BC2A48A00F6741B /* Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1877AD092BC2A48A00F6741B /* DiaryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryApp.swift; sourceTree = "<group>"; };
@@ -139,14 +142,6 @@
 			path = CustomViews;
 			sourceTree = "<group>";
 		};
-		182913C62BC948D0001F6161 /* DiaryTestPlan */ = {
-			isa = PBXGroup;
-			children = (
-				182913C52BC94885001F6161 /* Diary.xctestplan */,
-			);
-			path = DiaryTestPlan;
-			sourceTree = "<group>";
-		};
 		182913C72BC96BD8001F6161 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +149,7 @@
 				18883F1E2BD00F4D004925A5 /* NetworkMonitor.swift */,
 				1828478D2BD16F2B004BAF5B /* Fonts.swift */,
 				18F9A9A62BDD133A00526D72 /* TestData.swift */,
+				181F8C622BE3D2EE000BDC6E /* KeychainManager.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -170,10 +166,10 @@
 		1877ACFD2BC2A48A00F6741B = {
 			isa = PBXGroup;
 			children = (
+				185A38492BDFED11000B1DA4 /* DiaryTestPlan.xctestplan */,
 				1877AD082BC2A48A00F6741B /* Diary */,
 				1877AD1E2BC2A48B00F6741B /* DiaryTests */,
 				1877AD282BC2A48B00F6741B /* DiaryUITests */,
-				182913C62BC948D0001F6161 /* DiaryTestPlan */,
 				1877AD072BC2A48A00F6741B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -191,6 +187,7 @@
 		1877AD082BC2A48A00F6741B /* Diary */ = {
 			isa = PBXGroup;
 			children = (
+				181F8C642BE3E54D000BDC6E /* Diary.entitlements */,
 				1877AD392BC2ADB200F6741B /* Views */,
 				1828478C2BD144FE004BAF5B /* CustomViews */,
 				182913C72BC96BD8001F6161 /* Helper */,
@@ -436,6 +433,7 @@
 				18883F1F2BD00F4D004925A5 /* NetworkMonitor.swift in Sources */,
 				182847872BD11D61004BAF5B /* DiaryContentView.swift in Sources */,
 				182329862BD2AF9B0023030B /* LoginDetailsView.swift in Sources */,
+				181F8C632BE3D2EE000BDC6E /* KeychainManager.swift in Sources */,
 				18363AAD2BCBD8F7004ECC3C /* HoldButton.swift in Sources */,
 				182913C42BC94550001F6161 /* LoaderView.swift in Sources */,
 				1877AD162BC2A48B00F6741B /* Diary.xcdatamodeld in Sources */,
@@ -600,6 +598,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Diary/Diary.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Diary/Preview Content\"";
@@ -628,6 +627,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Diary/Diary.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Diary/Preview Content\"";

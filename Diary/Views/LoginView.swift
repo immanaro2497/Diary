@@ -295,11 +295,13 @@ struct LoginView: View {
             user.password = password
             do {
                 try viewContext.save()
+                KeychainManager.savePasswordToKeychain(username: name, password: password)
             } catch {
                 print(error)
             }
         } else {
             let matchingUser = users.first(where: { $0.username?.caseInsensitiveCompare(name) == .orderedSame })
+            print("keychain matching password - ", KeychainManager.checkUserPasswordMatchingInKeychain(username: name, password: password))
             if matchingUser?.password == password {
                 visibleScreen = .diaryTabScreen
             } else {

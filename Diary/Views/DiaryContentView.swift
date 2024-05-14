@@ -35,6 +35,11 @@ struct DiaryContentView: View {
                 ToastView(message: $toastMessage)
             }
         }
+        .overlay(alignment: .top) {
+            Color.launchBackground
+                .ignoresSafeArea(edges: .top)
+                .frame(height: 0)
+        }
         .onChange(of: networkMonitor.status) { _, newValue in
             if newValue == .offline {
                 toastMessage = "Network offline"

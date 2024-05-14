@@ -7,6 +7,9 @@
     "Add Item" : {
 
     },
+    "Close" : {
+
+    },
     "Confirm password" : {
       "localizations" : {
         "hi" : {
@@ -42,6 +45,12 @@
     "Error. %@" : {
 
     },
+    "fwefwe" : {
+
+    },
+    "Hello, World!" : {
+
+    },
     "Hide password" : {
 
     },
@@ -58,10 +67,10 @@
         }
       }
     },
-    "Login Details" : {
+    "Login Failure" : {
 
     },
-    "Login Failure" : {
+    "Menu" : {
 
     },
     "Name" : {
@@ -101,6 +110,9 @@
 
     },
     "Show password" : {
+
+    },
+    "User PIN" : {
 
     },
     "Username or Password did not match" : {

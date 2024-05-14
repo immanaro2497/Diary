@@ -29,7 +29,7 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:DiaryUITests/Diary.xctestplan"
+            reference = "container:DiaryTestPlan.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>

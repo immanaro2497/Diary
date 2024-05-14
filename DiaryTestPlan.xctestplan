@@ -1,0 +1,41 @@
+{
+  "configurations" : [
+    {
+      "id" : "8B03C5FD-159B-4C95-A34A-0440045FE921",
+      "name" : "Configuration 1",
+      "options" : {
+        "areLocalizationScreenshotsEnabled" : false,
+        "language" : "",
+        "region" : "",
+        "uiTestingScreenshotsLifetime" : "keepNever",
+        "userAttachmentLifetime" : "keepNever"
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "areLocalizationScreenshotsEnabled" : true,
+    "language" : "en",
+    "preferredScreenCaptureFormat" : "screenshot",
+    "region" : "US",
+    "testTimeoutsEnabled" : true,
+    "uiTestingScreenshotsLifetime" : "keepAlways",
+    "userAttachmentLifetime" : "keepAlways"
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Diary.xcodeproj",
+        "identifier" : "1877AD1A2BC2A48B00F6741B",
+        "name" : "DiaryTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Diary.xcodeproj",
+        "identifier" : "1877AD242BC2A48B00F6741B",
+        "name" : "DiaryUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

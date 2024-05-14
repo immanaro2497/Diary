@@ -8,11 +8,29 @@
 import SwiftUI
 
 struct LoginDetailsView: View {
+    
+    @State private var userPIN: String = ""
+    @State private var canEditPIN: Bool = false
+    
     var body: some View {
-        Text("Login Details")
+        
+        VStack {
+            
+            TextField("User PIN", text: $userPIN, prompt: Text(""))
+                .foregroundStyle(canEditPIN ? .red : .gray)
+                .modifier(LoginTextField(title: "User PIN", error: nil))
+                .foregroundStyle(canEditPIN ? .red : .gray)
+//                .disabled(!canEditPIN)
+            
+            
+            
+        }
+        
     }
 }
 
 #Preview {
     LoginDetailsView()
+        .frame(maxWidth: .greatestFiniteMagnitude, maxHeight: .greatestFiniteMagnitude)
+        .background(.launchBackground)
 }
