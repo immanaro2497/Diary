@@ -20,7 +20,6 @@
 		182913CC2BC96CC3001F6161 /* CustomViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182913CB2BC96CC3001F6161 /* CustomViewModifiers.swift */; };
 		18363AAD2BCBD8F7004ECC3C /* HoldButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18363AAC2BCBD8F7004ECC3C /* HoldButton.swift */; };
 		18363AAF2BCBE673004ECC3C /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18363AAE2BCBE673004ECC3C /* UIDevice+Extension.swift */; };
-		1847D8BA2BD943EB007D47E0 /* EarthquakeLargeDataPretty.json in Resources */ = {isa = PBXBuildFile; fileRef = 1847D8B92BD943EB007D47E0 /* EarthquakeLargeDataPretty.json */; };
 		18665B1B2BC549BA004E86DF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18665B1A2BC549BA004E86DF /* LoginView.swift */; };
 		1877AD0A2BC2A48A00F6741B /* DiaryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1877AD092BC2A48A00F6741B /* DiaryApp.swift */; };
 		1877AD0C2BC2A48A00F6741B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1877AD0B2BC2A48A00F6741B /* ContentView.swift */; };
@@ -77,7 +76,6 @@
 		182913CB2BC96CC3001F6161 /* CustomViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewModifiers.swift; sourceTree = "<group>"; };
 		18363AAC2BCBD8F7004ECC3C /* HoldButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoldButton.swift; sourceTree = "<group>"; };
 		18363AAE2BCBE673004ECC3C /* UIDevice+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
-		1847D8B92BD943EB007D47E0 /* EarthquakeLargeDataPretty.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = EarthquakeLargeDataPretty.json; sourceTree = "<group>"; };
 		185A38492BDFED11000B1DA4 /* DiaryTestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = DiaryTestPlan.xctestplan; sourceTree = "<group>"; };
 		18665B1A2BC549BA004E86DF /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		1877AD062BC2A48A00F6741B /* Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diary.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -252,7 +250,6 @@
 			isa = PBXGroup;
 			children = (
 				18D8B4092BD93E7E00F942AA /* EarthquakeLargeData.json */,
-				1847D8B92BD943EB007D47E0 /* EarthquakeLargeDataPretty.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -385,7 +382,6 @@
 				1877AD112BC2A48B00F6741B /* Preview Assets.xcassets in Resources */,
 				1877AD0E2BC2A48B00F6741B /* Assets.xcassets in Resources */,
 				1828478B2BD144E8004BAF5B /* Localizable.xcstrings in Resources */,
-				1847D8BA2BD943EB007D47E0 /* EarthquakeLargeDataPretty.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
